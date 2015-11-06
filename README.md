@@ -2,7 +2,7 @@
 
 cpwd is simple, stateless password manager. You enter a master key and the name of an account (ex. "gmail"), wait a few seconds, and cpwd generates a password for that account ready in your clipboard. You can reuse the same master key for all your accounts, and cpwd will generate a different strong password for every account. Every time you want to log in, just launch cpwd and enter the same master key and account name. Simple! Useful!
 
-cpwd is a C port of [npwd] (https://github.com/kaepora/npwd) by [Nadim Kobeissi] (https://nadim.computer), **but from version 2.0 it's not compatible with it**. If you need a version comapitble with npwd, look at [cpwd] (https://github.com/postboy/cpwd)
+cpwd is a C port of [npwd] (https://github.com/kaepora/npwd) by [Nadim Kobeissi] (https://nadim.computer), **but from version 2.0 it's not compatible with original**. If you need a version comapitble with npwd, look at [cpwd] (https://github.com/postboy/cpwd)
 
 ### Benefits
 1. Memorize a single master key, but still get a different strong password for every account.
@@ -41,7 +41,7 @@ cpwd is a C port of [npwd] (https://github.com/kaepora/npwd) by [Nadim Kobeissi]
 
 ### See also
 1. [My post in Russian] (https://medium.com/@posthedgehog/%D0%BA%D0%B0%D0%BA-%D1%8F-%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D0%BB-%D1%81%D0%B5%D0%B1%D0%B5-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D0%B5%D0%B9-4b4404352bd0) about this project.
-2. [npwd] (https://github.com/kaepora/npwd) — imagine cpwd with very easy installation, but maybe not that fast work :)
+2. [npwd] (https://github.com/kaepora/npwd) — imagine cpwd with very easy installation, but maybe not that fast work :) cpwd version compatible with npwd is [here] (https://github.com/postboy/cpwd).
 3. [jkalbhenn's password manager] (https://github.com/jkalbhenn/scrypt) is essentialy the same project, but started two years before me.
 
 ### Related work
@@ -52,7 +52,7 @@ cpwd is a C port of [npwd] (https://github.com/kaepora/npwd) by [Nadim Kobeissi]
 5. [Password manager without a password manager] (https://gist.github.com/jaseg/3334991) that [was broken] (https://news.ycombinator.com/item?id=4374888), 2012.
 
 ### License
-cpwd itself is licensed under [GPL v3] (https://www.gnu.org/licenses/gpl-3.0.en.html), but uses [scrypt 1.1.6] (https://www.tarsnap.com/scrypt.html) licensed under [BSD 2-Clause] (http://opensource.org/licenses/bsd-license.php), [GCC Poison] (http://blog.leafsr.com/2013/12/02/gcc-poison) and [btoa 4.0] (http://www.ibiblio.org/pub/packages/ccic/software/unix/utils/btoa.c) which is public domain. Commands for working with clipboard are taken from [node-copy-paste] (https://github.com/xavi-/node-copy-paste).
+cpwd itself is licensed under [GPL v3] (https://www.gnu.org/licenses/gpl-3.0.en.html), but uses [scrypt 1.1.6] (https://www.tarsnap.com/scrypt.html) licensed under [BSD 2-Clause] (http://opensource.org/licenses/bsd-license.php), [btoa 4.0] (http://www.ibiblio.org/pub/packages/ccic/software/unix/utils/btoa.c) and [GCC Poison] (http://blog.leafsr.com/2013/12/02/gcc-poison) which is public domain. Commands for working with clipboard are taken from [node-copy-paste] (https://github.com/xavi-/node-copy-paste).
 
 ### Author
 Zuboff Ivan // anotherdiskmag on gooooooogle mail
