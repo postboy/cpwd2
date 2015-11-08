@@ -2,7 +2,7 @@
 
 cpwd is simple, stateless password manager. You enter a master key and the name of an account (ex. "gmail"), wait a few seconds, and cpwd generates a password for that account ready in your clipboard. You can reuse the same master key for all your accounts, and cpwd will generate a different strong password for every account. Every time you want to log in, just launch cpwd and enter the same master key and account name. Simple! Useful!
 
-cpwd is a C port of [npwd] (https://github.com/kaepora/npwd) by [Nadim Kobeissi] (https://nadim.computer), **but from version 2.0 it's not compatible with original**. If you need a version comapitble with npwd, look at [cpwd] (https://github.com/postboy/cpwd)
+cpwd is a C port of [npwd] (https://github.com/kaepora/npwd) by [Nadim Kobeissi] (https://nadim.computer), **but from version 2.0 it's not compatible with original**. If you need a version comapitble with npwd, look at [cpwd] (https://github.com/postboy/cpwd)!
 
 ### Benefits
 1. Memorize a single master key, but still get a different strong password for every account.
