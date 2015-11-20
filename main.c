@@ -274,7 +274,7 @@ extern int main (int argc, char **argv)
    
 	//clear a buffer for a master key and for salt as soon as we can
 	free(key);
-	bzero(salt, 1024);
+	memset(salt, 0, sizeof(salt));
 
 
 
@@ -300,7 +300,7 @@ extern int main (int argc, char **argv)
 		printf("\nOld password in clipboard!\n");
 		sleep(15);
 	
-		bzero(command, 1);	//clear first byte of "command" for owerwriting it
+		memset(command, 0, 1);	//clear first byte of "command" for owerwriting it
 		
 		}
 
@@ -312,12 +312,13 @@ extern int main (int argc, char **argv)
 		encode(hash[i]);
 
 	//clear a buffer for an unencoded hash as soon as we can
-	bzero(hash, 16);
+	memset(hash, 0, sizeof(hash));
 
 	//now let's take an encoded hash to clipboard!
 	//to do that, compose and execute a command "command_begin"+ASCII85-encoded hash+"command_end"
 	strncat(command, command_begin, strlen(command_begin));
 	strncat(command, hash_encoded, 20);
+	memset(hash_encoded, 0, sizeof(hash_encoded));			//clear a buffer with encoded password as soon as we can
 	strncat(command, command_end, strlen(command_end));
 	
 	if (system(command)) {
@@ -325,9 +326,8 @@ extern int main (int argc, char **argv)
 		return 1;
     	};
     
-    //clear a buffer for an encoded password as soon as we can
-    bzero(hash_encoded, 21);
-	bzero(command, 100);
+    //clear a buffer with encoded password as soon as we can
+	memset(command, 0, sizeof(command));
 	
 	//notify user and pause for 15 seconds
 	//check if we're in migration mode
