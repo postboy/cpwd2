@@ -25,6 +25,7 @@ static void charout(char c) {
 		default: break;
 		}
 	strncat(hash_encoded, &c, 1);
+	c = 0;	//paranoid memory wiping
 }
 
 //math part of ASCII85 encoding
@@ -56,7 +57,9 @@ static void wordout(long int word)
     	charout(EN(word / 85));
     	word %= 85;
     	charout(EN(word));
+    	tmp = 0;	//memory wiping
 		}
+	word = 0;		//memory wiping too
 }
 
 //encode one byte - main function for ASCII85 encoding
@@ -72,6 +75,7 @@ static void encode(int c)
 		bcount = 0;
 		} 
 	else bcount += 1;
+	c = 0;	//memory wiping once again
 }
 
 extern int main (int argc, char **argv)
